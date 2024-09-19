@@ -18,42 +18,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Imię"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            />
 
         <EditText
             android:id="@+id/editTextSurname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nazwisko"
-            android:inputType="text"/>
+            android:inputType="text"
+            />
 
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Adres e-mail"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress"
+            />
 
         <EditText
             android:id="@+id/editPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Numer telefonu"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            />
 
         <EditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Hasło"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            />
 
         <EditText
             android:id="@+id/editTextPasswordCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Potwierdzenie hasła"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            />
 
         <Button
             android:id="@+id/buttonSubmit"

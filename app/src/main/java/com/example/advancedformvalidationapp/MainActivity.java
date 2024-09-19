@@ -33,18 +33,25 @@ public class MainActivity extends AppCompatActivity {
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String name = editTextName.getText().toString().trim();
                 String surname = editTextSurname.getText().toString().trim();
                 String email = editTextEmail.getText().toString().trim();
                 String phoneNumber = editPhoneNumber.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
                 String passwordCheck = editTextPasswordCheck.getText().toString().trim();
+
                 if (name.isEmpty() || surname.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Proszę wprowadzić imię i nazwisko", Toast.LENGTH_SHORT).show();
                 } else if (email.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Proszę wprowadzić adres e-mail", Toast.LENGTH_SHORT).show();
-                } else if
-                (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                } else if (phoneNumber.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Proszę wprowadzić numer telefonu", Toast.LENGTH_SHORT).show();
+                } else if (password.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Proszę wprowadzić hasło", Toast.LENGTH_SHORT).show();
+                } else if (passwordCheck.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Proszę wprowadzić potwierdzenie hasła", Toast.LENGTH_SHORT).show();
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     Toast.makeText(MainActivity.this, "Niepoprawny adres e-mail", Toast.LENGTH_SHORT).show();
                 } else if (phoneNumber.length() < 9) {
                     Toast.makeText(MainActivity.this, "Niepoprawny numer telefonu", Toast.LENGTH_SHORT).show();
