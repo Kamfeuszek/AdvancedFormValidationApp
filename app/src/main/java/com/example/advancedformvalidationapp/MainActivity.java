@@ -46,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 } else if
                 (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     Toast.makeText(MainActivity.this, "Niepoprawny adres e-mail", Toast.LENGTH_SHORT).show();
+                } else if (phoneNumber.length() < 9) {
+                    Toast.makeText(MainActivity.this, "Niepoprawny numer telefonu", Toast.LENGTH_SHORT).show();
+                } else if (password.length() < 6) {
+                    Toast.makeText(MainActivity.this, "Niepoprawe hasło", Toast.LENGTH_SHORT).show();
+                } else if (!passwordCheck.equals(password)) {
+                    Toast.makeText(MainActivity.this, "Hasła się nie zgadzają", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "Formularz przesłany poprawnie", Toast.LENGTH_SHORT).show();
                 }
